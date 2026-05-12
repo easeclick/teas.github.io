@@ -1,520 +1,251 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="pageTitle">Tea Origin 茶源 - 中国茶叶出口菲律宾</title>
-  <meta name="description" content="Tea Origin 茶源 - 高品质中国茶叶出口菲律宾，正宗原产地，直达菲律宾">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0a0a0a;
-      --bg-card: rgba(255,255,255,0.03);
-      --bg-card-hover: rgba(255,255,255,0.06);
-      --border: rgba(255,255,255,0.06);
-      --border-card: rgba(255,255,255,0.06);
-      --text: #f5f5f5;
-      --text-secondary: rgba(255,255,255,0.45);
-      --text-muted: rgba(255,255,255,0.35);
-      --nav-border: rgba(255,255,255,0.06);
-      --footer: rgba(255,255,255,0.2);
-      --gradient-text: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.5) 100%);
-      --glow-1: rgba(34, 197, 94, 0.06);
-      --glow-2: rgba(180, 130, 70, 0.06);
-      --pattern: rgba(255,255,255,0.02);
-    }
-    .light {
-      --bg: #f8f9fa;
-      --bg-card: rgba(0,0,0,0.02);
-      --bg-card-hover: rgba(0,0,0,0.04);
-      --border: rgba(0,0,0,0.06);
-      --border-card: rgba(0,0,0,0.06);
-      --text: #1a1a1a;
-      --text-secondary: rgba(0,0,0,0.5);
-      --text-muted: rgba(0,0,0,0.4);
-      --nav-border: rgba(0,0,0,0.06);
-      --footer: rgba(0,0,0,0.3);
-      --gradient-text: linear-gradient(135deg, #1a1a1a 0%, rgba(0,0,0,0.5) 100%);
-      --glow-1: rgba(34, 197, 94, 0.08);
-      --glow-2: rgba(180, 130, 70, 0.08);
-      --pattern: rgba(0,0,0,0.02);
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Noto Sans SC', 'Inter', -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-      transition: background 0.3s, color 0.3s;
-    }
-    .bg {
-      position: fixed; inset: 0;
-      background:
-        radial-gradient(ellipse at 20% 30%, var(--glow-1) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 70%, var(--glow-2) 0%, transparent 50%);
-      z-index: 0; pointer-events: none;
-    }
-    .bg-pattern {
-      position: fixed; inset: 0;
-      background-image:
-        linear-gradient(var(--pattern) 1px, transparent 1px),
-        linear-gradient(90deg, var(--pattern) 1px, transparent 1px);
-      background-size: 60px 60px;
-      z-index: 0; pointer-events: none;
-    }
-    .container { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-
-    nav {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 24px 0; border-bottom: 1px solid var(--nav-border);
-      transition: border-color 0.3s;
-    }
-    .logo { display: flex; align-items: center; gap: 10px; font-size: 1.4rem; font-weight: 800; }
-    .logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, #22c55e, #b48246); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
-    .logo-text { background: linear-gradient(135deg, #22c55e, #b48246); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .nav-right { display: flex; align-items: center; gap: 8px; }
-    .icon-btn {
-      width: 38px; height: 38px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--bg-card);
-      color: var(--text);
-      font-size: 1rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s;
-      user-select: none;
-    }
-    .icon-btn:hover {
-      background: var(--bg-card-hover);
-      border-color: var(--border-card);
-      transform: scale(1.05);
-    }
-    .lang-btn {
-      padding: 0 12px;
-      height: 38px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--bg-card);
-      color: var(--text-secondary);
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'Inter', sans-serif;
-      user-select: none;
-    }
-    .lang-btn:hover {
-      background: var(--bg-card-hover);
-      color: var(--text);
-    }
-    .lang-btn.active {
-      background: rgba(34, 197, 94, 0.15);
-      border-color: rgba(34, 197, 94, 0.3);
-      color: #22c55e;
-    }
-    .nav-cta {
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: #000;
-      padding: 10px 24px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(34,197,94,0.3); }
-
-    .hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 100px 0 80px; }
-    .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(180, 130, 70, 0.1); border: 1px solid rgba(180, 130, 70, 0.25); padding: 6px 18px; border-radius: 100px; font-size: 0.8rem; color: #b48246; margin-bottom: 32px; }
-    .dot { width: 6px; height: 6px; background: #b48246; border-radius: 50%; animation: pulse 2s infinite; }
-    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 900;
-      line-height: 1.15;
-      margin-bottom: 20px;
-      background: var(--gradient-text);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      transition: background 0.3s;
-    }
-    .hero h1 em { font-style: normal; background: linear-gradient(135deg, #22c55e, #b48246); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero p { font-size: 1.1rem; color: var(--text-secondary); max-width: 520px; margin-bottom: 36px; }
-    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
-    .btn { padding: 14px 32px; border-radius: 10px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; }
-    .btn-primary { background: linear-gradient(135deg, #22c55e, #16a34a); color: #000; }
-    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(34,197,94,0.3); }
-    .btn-secondary { background: var(--bg-card); color: var(--text); border: 1px solid var(--border); }
-    .btn-secondary:hover { background: var(--bg-card-hover); }
-
-    .section { padding: 90px 0; border-top: 1px solid var(--border); transition: border-color 0.3s; }
-    .section-title { text-align: center; font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; }
-    .section-sub { text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 56px; }
-
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .product-card { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 14px; padding: 32px; transition: all 0.3s; text-align: center; }
-    .product-card:hover { background: var(--bg-card-hover); border-color: rgba(180, 130, 70, 0.2); transform: translateY(-3px); }
-    .product-emoji { font-size: 3rem; margin-bottom: 16px; }
-    .product-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; }
-    .product-en { font-family: 'Inter', sans-serif; color: var(--text-muted); font-size: 0.8rem; margin-bottom: 10px; }
-    .product-desc { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; }
-
-    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .feature-card { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 12px; padding: 28px; transition: all 0.3s; }
-    .feature-card:hover { background: var(--bg-card-hover); border-color: var(--border-card); transform: translateY(-2px); }
-    .feature-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; margin-bottom: 16px; background: rgba(34, 197, 94, 0.1); }
-    .feature-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
-    .feature-card p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; }
-
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
-    .stat-num { font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #22c55e, #b48246); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .stat-label { color: var(--text-muted); font-size: 0.85rem; margin-top: 4px; }
-
-    .contact-card { max-width: 500px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 40px; text-align: center; }
-    .contact-item { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 0; color: var(--text-secondary); font-size: 0.95rem; }
-    .contact-item a { color: #22c55e; text-decoration: none; }
-    .contact-item a:hover { text-decoration: underline; }
-
-    footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--footer); font-size: 0.8rem; transition: border-color 0.3s; }
-
-    @media (max-width: 768px) {
-      .hero { padding: 70px 0 50px; }
-      .section { padding: 60px 0; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .nav-cta { display: none; }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tea Origin 茶源 — 正宗中国茶叶直送菲律宾。精选铁观音、龙井、普洱、茉莉花茶、红茶、白茶，原产地直供。" />
+  <meta name="keywords" content="中国茶叶,菲律宾,茶源,铁观音,龙井,普洱茶, Tea Origin, Chinese tea Philippines" />
+  <title>Tea Origin 茶源 — 正宗中国茶叶 · 直送菲律宾</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="bg"></div>
-  <div class="bg-pattern"></div>
-  <div class="container">
-    <nav>
-      <div class="logo">
-        <div class="logo-icon">🍃</div>
-        <span class="logo-text">Tea Origin</span>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Tea<span>Origin</span></a>
+      <button type="button" class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#products" class="nav__link" data-i18n="nav_products">我们的茶</a></li>
+        <li><a href="#about" class="nav__link" data-i18n="nav_story">品牌故事</a></li>
+        <li><a href="#contact" class="nav__link" data-i18n="nav_contact">联系我们</a></li>
+        <li><a href="#" class="nav__cta" data-i18n="nav_shopee">Shopee 购买 →</a></li>
+      </ul>
+    </div>
+    <div class="nav__overlay" id="navOverlay"></div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img
+        src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=1600&q=80"
+        alt="茶山"
+        loading="eager"
+      />
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__pattern"></div>
+    <div class="hero__inner">
+      <span class="hero__badge">直运菲律宾 · Direct to Philippines</span>
+      <h1 class="hero__title">
+        正宗中国茶叶<br />
+        一杯 <span>茶源</span>，品味东方
+      </h1>
+      <p class="hero__subtitle">
+        从中国名茶产地到您的茶杯。铁观音的兰花香、龙井的鲜爽、普洱的醇厚——
+        每一片茶叶都精心甄选，直送菲律宾。
+      </p>
+      <div class="hero__actions">
+        <a href="#products" class="btn btn-primary">探索我们的茶</a>
+        <a href="#" class="btn btn-outline">Shopee 购买 <span style="font-size:1.1em">→</span></a>
       </div>
-      <div class="nav-right">
-        <button class="icon-btn" id="themeToggle" title="Toggle theme">🌙</button>
-        <button class="lang-btn active" id="langZh">中</button>
-        <button class="lang-btn" id="langEn">EN</button>
-        <a href="#contact" class="nav-cta" id="navCta">联系我们</a>
-      </div>
-    </nav>
+    </div>
+    <div class="hero__scroll">
+      <div class="hero__scroll-indicator" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})"></div>
+    </div>
+  </section>
 
-    <section class="hero">
-      <div class="badge"><span class="dot"></span> <span id="badgeText">中国原产地 · 直供菲律宾</span></div>
-      <h1 id="heroTitle"><span id="hero1">把</span><em><span id="heroEm">中国好茶</span></em><br><span id="hero2">带到菲律宾</span></h1>
-      <p id="heroDesc">正宗中国茶叶出口菲律宾，从茶园到手中，全程品质把控，让菲律宾朋友品尝真正的东方茶韵。</p>
-      <div class="hero-btns">
-        <a href="#products" class="btn btn-primary" id="heroBtn1">查看产品</a>
-        <a href="#contact" class="btn btn-secondary" id="heroBtn2">商务合作</a>
+  <!-- Features -->
+  <section class="features">
+    <div class="container features__grid">
+      <div class="feature reveal">
+        <span class="feature__icon">🌱</span>
+        <h3>源头直供</h3>
+        <p>精选中国核心茶产区，从福建安溪、浙江杭州到云南普洱，确保每一片茶叶的品质</p>
       </div>
-    </section>
-
-    <section class="section" id="products">
-      <h2 class="section-title" id="productsTitle">我们的茶品</h2>
-      <p class="section-sub" id="productsSub">从中国核心产区精选，直达菲律宾</p>
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-emoji">🫒</div>
-          <h3 id="p1Name">铁观音</h3>
-          <div class="product-en">Tie Guan Yin</div>
-          <p class="product-desc" id="p1Desc">福建安溪传统乌龙茶，兰花香持久，七泡有余香。半发酵工艺，口感醇厚回甘。</p>
-        </div>
-        <div class="product-card">
-          <div class="product-emoji">🌱</div>
-          <h3 id="p2Name">龙井绿茶</h3>
-          <div class="product-en">Long Jing</div>
-          <p class="product-desc" id="p2Desc">西湖龙井，中国十大名茶之首。清香鲜爽，色泽翠绿，春茶一芽一叶精制。</p>
-        </div>
-        <div class="product-card">
-          <div class="product-emoji">🫖</div>
-          <h3 id="p3Name">普洱茶</h3>
-          <div class="product-en">Pu-erh</div>
-          <p class="product-desc" id="p3Desc">云南大叶种古树茶，越陈越香。熟普醇厚顺滑，生普回甘生津，各有风味。</p>
-        </div>
-        <div class="product-card">
-          <div class="product-emoji">🌸</div>
-          <h3 id="p4Name">茉莉花茶</h3>
-          <div class="product-en">Jasmine Tea</div>
-          <p class="product-desc" id="p4Desc">福州茉莉花窨制，茶引花香。清新怡人，特别适合菲律宾炎热天气饮用。</p>
-        </div>
-        <div class="product-card">
-          <div class="product-emoji">🌿</div>
-          <h3 id="p5Name">红茶</h3>
-          <div class="product-en">Black Tea</div>
-          <p class="product-desc" id="p5Desc">正山小种、祁门红茶，传统功夫红茶。蜜香甘甜，适合加奶或原味品饮。</p>
-        </div>
-        <div class="product-card">
-          <div class="product-emoji">🎋</div>
-          <h3 id="p6Name">白茶</h3>
-          <div class="product-en">White Tea</div>
-          <p class="product-desc" id="p6Desc">福鼎白茶，自然萎凋。白毫银针、白牡丹，越存越珍贵，一年茶三年药。</p>
-        </div>
+      <div class="feature reveal reveal-delay-1">
+        <span class="feature__icon">📦</span>
+        <h3>菲律宾全境配送</h3>
+        <p>马尼拉、宿务、达沃全菲配送，订单满 ₱999 免运费，3-5 日送达</p>
       </div>
-    </section>
+      <div class="feature reveal reveal-delay-2">
+        <span class="feature__icon">🛡️</span>
+        <h3>品质保证</h3>
+        <p>真空密封包装，锁住新鲜。不满意无条件退换，您的满意是我们的承诺</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2 class="section-title" id="whyTitle">为什么选择我们</h2>
-      <p class="section-sub" id="whySub">原产地直供 · 品质保证 · 菲律宾专线</p>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🌏</div>
-          <h3 id="f1Name">原产地直供</h3>
-          <p id="f1Desc">与中国核心茶产区深度合作，从福建、浙江、云南、安徽等地直接采购，杜绝中间商加价。</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📋</div>
-          <h3 id="f2Name">品质把控</h3>
-          <p id="f2Desc">每批次产品经过严格筛选和品质检测，符合菲律宾进口食品安全标准，品质可追溯。</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🚢</div>
-          <h3 id="f3Name">菲律宾专线</h3>
-          <p id="f3Desc">专业菲律宾物流通道，海运空运可选。马尼拉、宿务、达沃均可直达，清关无忧。</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">💬</div>
-          <h3 id="f4Name">双语服务</h3>
-          <p id="f4Desc">中文、英语、他加禄语三语支持，从选品到售后全程沟通无障碍。</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📦</div>
-          <h3 id="f5Name">定制包装</h3>
-          <p id="f5Desc">支持 OEM/ODM 定制，根据菲律宾市场需求设计包装，品牌代工均可。</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🤝</div>
-          <h3 id="f6Name">长期合作</h3>
-          <p id="f6Desc">提供样品、市场推广支持、茶文化培训等增值服务，与合作伙伴共同成长。</p>
+  <!-- Products -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Our Selection</span>
+        <h2>精选好茶</h2>
+        <p class="section-desc">六大经典中国名茶，总有一款适合你。每款都是原产地直供，品质保证。</p>
+      </div>
+      <div class="products__grid" id="productGrid">
+        <!-- Products rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+      <div class="about__image reveal">
+        <img
+          src="https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=800&q=80"
+          alt="中国茶道"
+          loading="lazy"
+        />
+        <div class="about__image-deco"></div>
+        <div class="about__image-deco about__image-deco--2"></div>
+      </div>
+      <div class="about__content reveal reveal-delay-1">
+        <span class="section-tag">Our Story</span>
+        <h2>从中国茶山<br/>到菲律宾茶杯</h2>
+        <p>
+          Tea Origin 茶源诞生于一个简单的想法——让菲律宾的茶爱好者品尝到
+          最正宗的中国茶。我们深入中国最负盛名的茶产区，与世代制茶的茶农合作，
+          精心挑选每一批茶叶。
+        </p>
+        <p>
+          从福建安溪的铁观音、杭州西湖的龙井，到云南深山的古树普洱——
+          每款茶都承载着它的产地故事和文化底蕴。我们相信，一杯好茶能跨越国界，
+          连接不同的文化与心灵。
+        </p>
+        <div class="about__stats">
+          <div class="about__stat">
+            <div class="about__stat-number">6+</div>
+            <div class="about__stat-label">名茶品种</div>
+          </div>
+          <div class="about__stat">
+            <div class="about__stat-number">5</div>
+            <div class="about__stat-label">中国核心茶区</div>
+          </div>
+          <div class="about__stat">
+            <div class="about__stat-number">50+</div>
+            <div class="about__stat-label">菲律宾城市配送</div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <div class="stats-grid">
-        <div><div class="stat-num">6</div><div class="stat-label" id="stat1">核心茶类</div></div>
-        <div><div class="stat-num">10+</div><div class="stat-label" id="stat2">合作茶园</div></div>
-        <div><div class="stat-num">7</div><div class="stat-label" id="stat3">天直达菲律宾</div></div>
-        <div><div class="stat-num">100%</div><div class="stat-label" id="stat4">品质保证</div></div>
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2>联系我们</h2>
+        <p class="section-desc">对茶叶有疑问？想批量订购？或者只是想聊聊天？我们很乐意听到你的声音。</p>
       </div>
-    </section>
+      <div class="contact__inner">
+        <div class="contact__info reveal">
+          <h3>让我们帮你找到<br/>最适合的那杯茶</h3>
+          <p>
+            无论是送礼还是自饮，我们都能为你推荐最合适的茶款。
+            也可以通过 Shopee 直接下单，享受快捷配送。
+          </p>
+          <div class="contact__details">
+            <div class="contact__detail">
+              <div class="contact__detail-icon">📧</div>
+              <span>hello@tea-origin.ph</span>
+            </div>
+            <div class="contact__detail">
+              <div class="contact__detail-icon">📱</div>
+              <span>+63 912 345 6789</span>
+            </div>
+            <div class="contact__detail">
+              <div class="contact__detail-icon">📍</div>
+              <span>Metro Manila, Philippines</span>
+            </div>
+          </div>
+          <div class="contact__shopee">
+            <div class="contact__shopee-icon">🛒</div>
+            <div class="contact__shopee-text">
+              <strong>Shopee 旗舰店</strong>
+              <span>立即下单，最快 3 天送达</span>
+            </div>
+            <a href="#" class="btn btn-green btn-sm">去购买 →</a>
+          </div>
+        </div>
+        <form class="contact__form reveal reveal-delay-1" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">姓名 *</label>
+              <input type="text" id="name" name="name" required placeholder="您的姓名" />
+            </div>
+            <div class="form-group">
+              <label for="email">邮箱 *</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">电话</label>
+            <input type="tel" id="phone" name="phone" placeholder="+63 9XX XXX XXXX" />
+          </div>
+          <div class="form-group">
+            <label for="product">感兴趣的产品</label>
+            <select id="product" name="product">
+              <option value="">请选择...</option>
+              <option value="tgy">铁观音 Tie Guan Yin</option>
+              <option value="lj">龙井 Long Jing</option>
+              <option value="per">普洱 Pu-erh</option>
+              <option value="ml">茉莉花茶 Jasmine Tea</option>
+              <option value="hc">红茶 Black Tea</option>
+              <option value="bc">白茶 White Tea</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">留言</label>
+            <textarea id="message" name="message" placeholder="有什么想对我们说的？"></textarea>
+          </div>
+          <button type="submit" class="btn btn-green form-submit">发送消息</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    <section class="section" id="contact">
-      <h2 class="section-title" id="contactTitle">联系我们</h2>
-      <p class="section-sub" id="contactSub">开启中国茶叶菲律宾之旅</p>
-      <div class="contact-card">
-        <div class="contact-item">📧 <a href="mailto:hello@teas.dpdns.org">hello@teas.dpdns.org</a></div>
-        <div class="contact-item">📱 WeChat / WhatsApp：<strong>+86 138 0000 0000</strong></div>
-        <div class="contact-item" style="border-top:1px solid var(--border); margin-top:12px; padding-top:20px; color:var(--text-muted); font-size:0.85rem;">
-          <span id="location">中国 · 福建 · 泉州 | Philippines · Manila</span>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <h3>Tea<span>Origin</span></h3>
+          <p>正宗中国茶叶，直送菲律宾。从茶山到茶杯，我们用心甄选每一片茶叶。</p>
+        </div>
+        <div>
+          <h4 class="footer__heading">快捷链接</h4>
+          <ul class="footer__links">
+            <li><a href="#products" class="footer__link">我们的茶</a></li>
+            <li><a href="#about" class="footer__link">品牌故事</a></li>
+            <li><a href="#contact" class="footer__link">联系我们</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">关注我们</h4>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Shopee 店铺</a></li>
+            <li><a href="#" class="footer__link">Facebook</a></li>
+            <li><a href="#" class="footer__link">Instagram</a></li>
+          </ul>
         </div>
       </div>
-    </section>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Tea Origin 茶源. All rights reserved.</span>
+        <span>Made with ❤️ for tea lovers in the Philippines</span>
+      </div>
+    </div>
+  </footer>
 
-    <footer>
-      <p><span id="footerText">&copy; 2026 Tea Origin 茶源 — 中国茶叶出口菲律宾</span> | Built with Cloudflare Workers</p>
-    </footer>
-  </div>
-
-  <script>
-    (function() {
-      var translations = {
-        zh: {
-          title: 'Tea Origin 茶源 - 中国茶叶出口菲律宾',
-          navCta: '联系我们',
-          badge: '中国原产地 · 直供菲律宾',
-          hero1: '把',
-          heroEm: '中国好茶',
-          hero2: '带到菲律宾',
-          heroDesc: '正宗中国茶叶出口菲律宾，从茶园到手中，全程品质把控，让菲律宾朋友品尝真正的东方茶韵。',
-          heroBtn1: '查看产品',
-          heroBtn2: '商务合作',
-          productsTitle: '我们的茶品',
-          productsSub: '从中国核心产区精选，直达菲律宾',
-          p1Name: '铁观音',
-          p1Desc: '福建安溪传统乌龙茶，兰花香持久，七泡有余香。半发酵工艺，口感醇厚回甘。',
-          p2Name: '龙井绿茶',
-          p2Desc: '西湖龙井，中国十大名茶之首。清香鲜爽，色泽翠绿，春茶一芽一叶精制。',
-          p3Name: '普洱茶',
-          p3Desc: '云南大叶种古树茶，越陈越香。熟普醇厚顺滑，生普回甘生津，各有风味。',
-          p4Name: '茉莉花茶',
-          p4Desc: '福州茉莉花窨制，茶引花香。清新怡人，特别适合菲律宾炎热天气饮用。',
-          p5Name: '红茶',
-          p5Desc: '正山小种、祁门红茶，传统功夫红茶。蜜香甘甜，适合加奶或原味品饮。',
-          p6Name: '白茶',
-          p6Desc: '福鼎白茶，自然萎凋。白毫银针、白牡丹，越存越珍贵，一年茶三年药。',
-          whyTitle: '为什么选择我们',
-          whySub: '原产地直供 · 品质保证 · 菲律宾专线',
-          f1Name: '原产地直供',
-          f1Desc: '与中国核心茶产区深度合作，从福建、浙江、云南、安徽等地直接采购，杜绝中间商加价。',
-          f2Name: '品质把控',
-          f2Desc: '每批次产品经过严格筛选和品质检测，符合菲律宾进口食品安全标准，品质可追溯。',
-          f3Name: '菲律宾专线',
-          f3Desc: '专业菲律宾物流通道，海运空运可选。马尼拉、宿务、达沃均可直达，清关无忧。',
-          f4Name: '双语服务',
-          f4Desc: '中文、英语、他加禄语三语支持，从选品到售后全程沟通无障碍。',
-          f5Name: '定制包装',
-          f5Desc: '支持 OEM/ODM 定制，根据菲律宾市场需求设计包装，品牌代工均可。',
-          f6Name: '长期合作',
-          f6Desc: '提供样品、市场推广支持、茶文化培训等增值服务，与合作伙伴共同成长。',
-          stat1: '核心茶类',
-          stat2: '合作茶园',
-          stat3: '天直达菲律宾',
-          stat4: '品质保证',
-          contactTitle: '联系我们',
-          contactSub: '开启中国茶叶菲律宾之旅',
-          location: '中国 · 福建 · 泉州 | Philippines · Manila',
-          footer: '\u00a9 2026 Tea Origin 茶源 — 中国茶叶出口菲律宾'
-        },
-        en: {
-          title: 'Tea Origin - Chinese Tea Export to Philippines',
-          navCta: 'Contact Us',
-          badge: 'Direct from China \u00b7 Delivered to Philippines',
-          hero1: 'Bring ',
-          heroEm: 'Premium Chinese Tea',
-          hero2: ' to the Philippines',
-          heroDesc: 'Authentic Chinese tea directly exported to the Philippines. From tea gardens to your cup, with full quality control throughout the journey.',
-          heroBtn1: 'View Products',
-          heroBtn2: 'Partner With Us',
-          productsTitle: 'Our Teas',
-          productsSub: "Selected from China's finest tea regions, delivered to the Philippines",
-          p1Name: 'Tie Guan Yin',
-          p1Desc: 'Traditional oolong from Anxi, Fujian. Known for its lasting orchid fragrance and rich, sweet finish. Semi-fermented with a smooth, lingering taste.',
-          p2Name: 'Long Jing',
-          p2Desc: "West Lake Dragon Well, China's most famous green tea. Fresh and clean with a vibrant jade color, crafted from tender spring buds.",
-          p3Name: 'Pu-erh',
-          p3Desc: 'Ancient tree tea from Yunnan. Aged to perfection \u2014 ripe Pu-erh is smooth and mellow, raw Pu-erh offers a complex, sweet finish.',
-          p4Name: 'Jasmine Tea',
-          p4Desc: 'Fragrant jasmine-scented green tea from Fuzhou. Light and refreshing, perfect for the warm Philippine climate.',
-          p5Name: 'Black Tea',
-          p5Desc: 'Premium Lapsang Souchong and Keemun. Traditional Chinese black teas with honey sweetness, great with milk or on its own.',
-          p6Name: 'White Tea',
-          p6Desc: 'Fuding white tea, naturally withered. Silver Needle and White Peony \u2014 age gracefully, becoming richer over time.',
-          whyTitle: 'Why Choose Us',
-          whySub: 'Direct Sourcing \u00b7 Quality Guaranteed \u00b7 Philippines Specialists',
-          f1Name: 'Direct Source',
-          f1Desc: "Deep partnerships with China's core tea regions \u2014 Fujian, Zhejiang, Yunnan, Anhui. Direct procurement, no middlemen.",
-          f2Name: 'Quality Control',
-          f2Desc: 'Every batch is strictly tested and meets Philippine food safety standards. Full traceability from garden to export.',
-          f3Name: 'Philippines Express',
-          f3Desc: 'Dedicated logistics to the Philippines, sea and air options. Direct to Manila, Cebu, Davao with smooth customs clearance.',
-          f4Name: 'Bilingual Service',
-          f4Desc: 'Support in Chinese, English, and Tagalog. Smooth communication from product selection to after-sales.',
-          f5Name: 'Custom Packaging',
-          f5Desc: 'OEM/ODM available. Package design tailored to the Philippine market, with private labeling options.',
-          f6Name: 'Long-term Partnership',
-          f6Desc: 'Samples, marketing support, and tea culture training provided. We grow together with our partners.',
-          stat1: 'Tea Categories',
-          stat2: 'Partner Farms',
-          stat3: 'Days to Philippines',
-          stat4: 'Quality Guarantee',
-          contactTitle: 'Contact Us',
-          contactSub: 'Start your Chinese tea journey to the Philippines',
-          location: 'Quanzhou, Fujian, China | Manila, Philippines',
-          footer: '\u00a9 2026 Tea Origin \u2014 Chinese Tea Export to Philippines'
-        }
-      };
-
-      var currentLang = localStorage.getItem('tea-lang') || 'zh';
-      var isDark = localStorage.getItem('tea-theme') !== 'light';
-
-      function applyLang(lang) {
-        var t = translations[lang];
-        if (!t) return;
-        document.title = t.title;
-        document.getElementById('pageTitle').textContent = t.title;
-        document.getElementById('navCta').textContent = t.navCta;
-        document.getElementById('badgeText').textContent = t.badge;
-        document.getElementById('hero1').textContent = t.hero1;
-        document.getElementById('heroEm').textContent = t.heroEm;
-        document.getElementById('hero2').textContent = t.hero2;
-        document.getElementById('heroDesc').textContent = t.heroDesc;
-        document.getElementById('heroBtn1').textContent = t.heroBtn1;
-        document.getElementById('heroBtn2').textContent = t.heroBtn2;
-        document.getElementById('productsTitle').textContent = t.productsTitle;
-        document.getElementById('productsSub').textContent = t.productsSub;
-        document.getElementById('p1Name').textContent = t.p1Name;
-        document.getElementById('p1Desc').textContent = t.p1Desc;
-        document.getElementById('p2Name').textContent = t.p2Name;
-        document.getElementById('p2Desc').textContent = t.p2Desc;
-        document.getElementById('p3Name').textContent = t.p3Name;
-        document.getElementById('p3Desc').textContent = t.p3Desc;
-        document.getElementById('p4Name').textContent = t.p4Name;
-        document.getElementById('p4Desc').textContent = t.p4Desc;
-        document.getElementById('p5Name').textContent = t.p5Name;
-        document.getElementById('p5Desc').textContent = t.p5Desc;
-        document.getElementById('p6Name').textContent = t.p6Name;
-        document.getElementById('p6Desc').textContent = t.p6Desc;
-        document.getElementById('whyTitle').textContent = t.whyTitle;
-        document.getElementById('whySub').textContent = t.whySub;
-        document.getElementById('f1Name').textContent = t.f1Name;
-        document.getElementById('f1Desc').textContent = t.f1Desc;
-        document.getElementById('f2Name').textContent = t.f2Name;
-        document.getElementById('f2Desc').textContent = t.f2Desc;
-        document.getElementById('f3Name').textContent = t.f3Name;
-        document.getElementById('f3Desc').textContent = t.f3Desc;
-        document.getElementById('f4Name').textContent = t.f4Name;
-        document.getElementById('f4Desc').textContent = t.f4Desc;
-        document.getElementById('f5Name').textContent = t.f5Name;
-        document.getElementById('f5Desc').textContent = t.f5Desc;
-        document.getElementById('f6Name').textContent = t.f6Name;
-        document.getElementById('f6Desc').textContent = t.f6Desc;
-        document.getElementById('stat1').textContent = t.stat1;
-        document.getElementById('stat2').textContent = t.stat2;
-        document.getElementById('stat3').textContent = t.stat3;
-        document.getElementById('stat4').textContent = t.stat4;
-        document.getElementById('contactTitle').textContent = t.contactTitle;
-        document.getElementById('contactSub').textContent = t.contactSub;
-        document.getElementById('location').textContent = t.location;
-        document.getElementById('footerText').textContent = t.footer;
-
-        document.getElementById('langZh').className = 'lang-btn' + (lang === 'zh' ? ' active' : '');
-        document.getElementById('langEn').className = 'lang-btn' + (lang === 'en' ? ' active' : '');
-        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-      }
-
-      function applyTheme() {
-        if (isDark) {
-          document.body.classList.remove('light');
-          document.getElementById('themeToggle').textContent = '\uD83C\uDF19';
-        } else {
-          document.body.classList.add('light');
-          document.getElementById('themeToggle').textContent = '\u2600\uFE0F';
-        }
-      }
-
-      // Apply saved state
-      applyLang(currentLang);
-      applyTheme();
-
-      // Event listeners
-      document.getElementById('langZh').addEventListener('click', function() {
-        currentLang = 'zh';
-        localStorage.setItem('tea-lang', 'zh');
-        applyLang('zh');
-      });
-
-      document.getElementById('langEn').addEventListener('click', function() {
-        currentLang = 'en';
-        localStorage.setItem('tea-lang', 'en');
-        applyLang('en');
-      });
-
-      document.getElementById('themeToggle').addEventListener('click', function() {
-        isDark = !isDark;
-        localStorage.setItem('tea-theme', isDark ? 'dark' : 'light');
-        applyTheme();
-      });
-    })();
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
