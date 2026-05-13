@@ -1004,10 +1004,22 @@ h2 {
     gap: 24px;
     transition: right 0.4s ease;
     box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+    z-index: 1001;
   }
 
   .nav__links.active {
     right: 0;
+  }
+
+  .lang-toggle {
+    background: rgba(26, 74, 42, 0.08);
+    color: var(--text-muted);
+    border-color: rgba(26, 74, 42, 0.2);
+  }
+  .lang-toggle:hover {
+    background: var(--green-deep);
+    border-color: var(--green-deep);
+    color: var(--white);
   }
 
   .nav__link, .nav.scrolled .nav__link {
