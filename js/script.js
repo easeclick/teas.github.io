@@ -429,6 +429,52 @@ contactForm.addEventListener('submit', async (e) => {
   }
 });
 
+// ─── Background Music ────────────────────────────
+
+const bgMusic = document.getElementById('bgMusic');
+const musicToggle = document.getElementById('musicToggle');
+let musicStarted = false;
+
+const musicPref = (() => {
+  try { return localStorage.getItem('teorigin_music'); } catch (_) { return null; }
+})();
+
+function updateMusicUI(playing) {
+  musicToggle.classList.toggle('playing', playing);
+  musicToggle.classList.toggle('muted', !playing);
+  musicToggle.setAttribute('aria-label', playing ? 'Pause background music' : 'Play background music');
+}
+
+function startMusic() {
+  if (musicStarted) return;
+  musicStarted = true;
+  const shouldPlay = musicPref !== 'off';
+  if (shouldPlay) {
+    bgMusic.play().then(() => updateMusicUI(true)).catch(() => updateMusicUI(false));
+  } else {
+    updateMusicUI(false);
+  }
+}
+
+// First user interaction starts music (browsers block autoplay)
+['click', 'touchstart', 'keydown'].forEach(evt => {
+  document.addEventListener(evt, startMusic, { once: true });
+});
+
+musicToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  if (bgMusic.paused) {
+    bgMusic.play().then(() => {
+      updateMusicUI(true);
+      try { localStorage.setItem('teorigin_music', 'on'); } catch (_) {}
+    }).catch(() => {});
+  } else {
+    bgMusic.pause();
+    updateMusicUI(false);
+    try { localStorage.setItem('teorigin_music', 'off'); } catch (_) {}
+  }
+});
+
 // ─── Bootstrap ──────────────────────────────────
 
 initLanguage();

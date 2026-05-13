@@ -1101,3 +1101,67 @@ h2 {
 .nav__overlay.active {
   opacity: 1;
 }
+
+/* --- Music Toggle --- */
+.music-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1002;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(26, 74, 42, 0.85);
+  color: var(--gold);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  backdrop-filter: blur(8px);
+}
+
+.music-toggle:hover {
+  background: var(--green-deep);
+  color: var(--gold-light);
+  transform: scale(1.08);
+  box-shadow: 0 4px 20px rgba(26, 74, 42, 0.4);
+}
+
+.music-toggle:active {
+  transform: scale(0.95);
+}
+
+.music-toggle.muted {
+  background: rgba(26, 74, 42, 0.4);
+  color: rgba(255,255,255,0.5);
+}
+
+.music-toggle.muted .music-toggle__icon {
+  animation: none;
+  opacity: 0.5;
+}
+
+.music-toggle__icon {
+  display: block;
+}
+
+.music-toggle.playing .music-toggle__icon {
+  animation: musicSpin 4s linear infinite;
+}
+
+@keyframes musicSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .music-toggle {
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+  }
+}
