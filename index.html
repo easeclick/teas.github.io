@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tea Origin 茶源 — 正宗中国茶叶直送菲律宾。精选铁观音、龙井、普洱、茉莉花茶、红茶、白茶，原产地直供。" />
-  <meta name="keywords" content="中国茶叶,菲律宾,茶源,铁观音,龙井,普洱茶, Tea Origin, Chinese tea Philippines" />
-  <title>Tea Origin 茶源 — 正宗中国茶叶 · 直送菲律宾</title>
+  <meta name="description" content="Tea Origin — authentic Chinese tea delivered to the Philippines. Premium Tie Guan Yin, Long Jing, Pu-erh, Jasmine, Black Tea, White Tea. Direct from origin." />
+  <meta name="keywords" content="Chinese tea, Philippines, Tea Origin, Tie Guan Yin, Long Jing, Pu-erh, jasmine tea" />
+  <title>Tea Origin — Authentic Chinese Tea · Delivered to Philippines</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -21,10 +21,11 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#products" class="nav__link" data-i18n="nav_products">我们的茶</a></li>
-        <li><a href="#about" class="nav__link" data-i18n="nav_story">品牌故事</a></li>
-        <li><a href="#contact" class="nav__link" data-i18n="nav_contact">联系我们</a></li>
-        <li><a href="#" class="nav__cta" data-i18n="nav_shopee">Shopee 购买 →</a></li>
+        <li><a href="#products" class="nav__link" data-i18n="nav_products">Our Teas</a></li>
+        <li><a href="#about" class="nav__link" data-i18n="nav_story">Our Story</a></li>
+        <li><a href="#contact" class="nav__link" data-i18n="nav_contact">Contact Us</a></li>
+        <li><button type="button" class="lang-toggle" id="langToggle" aria-label="Switch to Chinese">中</button></li>
+        <li><a href="#" class="nav__cta" data-i18n="nav_shopee">Shopee →</a></li>
       </ul>
     </div>
     <div class="nav__overlay" id="navOverlay"></div>
@@ -35,25 +36,24 @@
     <div class="hero__bg">
       <img
         src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=1600&q=80"
-        alt="茶山"
+        alt="Tea mountains"
         loading="eager"
       />
     </div>
     <div class="hero__overlay"></div>
     <div class="hero__pattern"></div>
     <div class="hero__inner">
-      <span class="hero__badge">直运菲律宾 · Direct to Philippines</span>
+      <span class="hero__badge" data-i18n="hero_badge">Direct to Philippines</span>
       <h1 class="hero__title">
-        正宗中国茶叶<br />
-        一杯 <span>茶源</span>，品味东方
+        <span data-i18n="hero_title_1">Authentic Chinese Tea</span><br />
+        <span data-i18n="hero_title_2">A Cup of <span>Tea Origin</span>, Taste the East</span>
       </h1>
-      <p class="hero__subtitle">
-        从中国名茶产地到您的茶杯。铁观音的兰花香、龙井的鲜爽、普洱的醇厚——
-        每一片茶叶都精心甄选，直送菲律宾。
+      <p class="hero__subtitle" data-i18n="hero_subtitle">
+        From China's most famous tea regions to your cup. The orchid fragrance of Tie Guan Yin, the fresh briskness of Long Jing, the deep richness of Pu-erh — every leaf is carefully selected and shipped directly to the Philippines.
       </p>
       <div class="hero__actions">
-        <a href="#products" class="btn btn-primary">探索我们的茶</a>
-        <a href="#" class="btn btn-outline">Shopee 购买 <span style="font-size:1.1em">→</span></a>
+        <a href="#products" class="btn btn-primary" data-i18n="hero_btn_primary">Explore Our Teas</a>
+        <a href="#" class="btn btn-outline" data-i18n="hero_btn_shopee">Shop on Shopee →</a>
       </div>
     </div>
     <div class="hero__scroll">
@@ -66,18 +66,18 @@
     <div class="container features__grid">
       <div class="feature reveal">
         <span class="feature__icon">🌱</span>
-        <h3>源头直供</h3>
-        <p>精选中国核心茶产区，从福建安溪、浙江杭州到云南普洱，确保每一片茶叶的品质</p>
+        <h3 data-i18n="feat_1_title">Direct from Source</h3>
+        <p data-i18n="feat_1_desc">Sourced from China's premier tea regions — Anxi, Hangzhou, Yunnan — ensuring every leaf meets the highest quality standards.</p>
       </div>
       <div class="feature reveal reveal-delay-1">
         <span class="feature__icon">📦</span>
-        <h3>菲律宾全境配送</h3>
-        <p>马尼拉、宿务、达沃全菲配送，订单满 ₱999 免运费，3-5 日送达</p>
+        <h3 data-i18n="feat_2_title">Delivery Across Philippines</h3>
+        <p data-i18n="feat_2_desc">Serving Manila, Cebu, Davao and nationwide. Free shipping on orders over ₱999, delivered in 3–5 days.</p>
       </div>
       <div class="feature reveal reveal-delay-2">
         <span class="feature__icon">🛡️</span>
-        <h3>品质保证</h3>
-        <p>真空密封包装，锁住新鲜。不满意无条件退换，您的满意是我们的承诺</p>
+        <h3 data-i18n="feat_3_title">Quality Guaranteed</h3>
+        <p data-i18n="feat_3_desc">Vacuum-sealed packaging locks in freshness. Not satisfied? Returns and exchanges are always unconditional — your satisfaction is our promise.</p>
       </div>
     </div>
   </section>
@@ -86,9 +86,9 @@
   <section class="products" id="products">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Our Selection</span>
-        <h2>精选好茶</h2>
-        <p class="section-desc">六大经典中国名茶，总有一款适合你。每款都是原产地直供，品质保证。</p>
+        <span class="section-tag" data-i18n="products_tag">Our Selection</span>
+        <h2 data-i18n="products_title">Premium Selection</h2>
+        <p class="section-desc" data-i18n="products_desc">Six classic Chinese teas, each one sourced directly from its origin. Quality guaranteed.</p>
       </div>
       <div class="products__grid" id="productGrid">
         <!-- Products rendered by JS -->
@@ -102,37 +102,33 @@
       <div class="about__image reveal">
         <img
           src="https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=800&q=80"
-          alt="中国茶道"
+          alt="Chinese tea ceremony"
           loading="lazy"
         />
         <div class="about__image-deco"></div>
         <div class="about__image-deco about__image-deco--2"></div>
       </div>
       <div class="about__content reveal reveal-delay-1">
-        <span class="section-tag">Our Story</span>
-        <h2>从中国茶山<br/>到菲律宾茶杯</h2>
-        <p>
-          Tea Origin 茶源诞生于一个简单的想法——让菲律宾的茶爱好者品尝到
-          最正宗的中国茶。我们深入中国最负盛名的茶产区，与世代制茶的茶农合作，
-          精心挑选每一批茶叶。
+        <span class="section-tag" data-i18n="about_tag">Our Story</span>
+        <h2 data-i18n="about_title">From China's Tea Mountains<br/>to Your Cup in the Philippines</h2>
+        <p data-i18n="about_p1">
+          Tea Origin was born from a simple idea — let tea lovers in the Philippines taste the most authentic Chinese tea. We travel to China's most renowned tea regions and partner with multi-generational tea farmers who pour their craft into every harvest.
         </p>
-        <p>
-          从福建安溪的铁观音、杭州西湖的龙井，到云南深山的古树普洱——
-          每款茶都承载着它的产地故事和文化底蕴。我们相信，一杯好茶能跨越国界，
-          连接不同的文化与心灵。
+        <p data-i18n="about_p2">
+          From Tie Guan Yin in Anxi, Fujian to Long Jing at West Lake, Hangzhou, and ancient-tree Pu-erh deep in Yunnan — each tea carries the story of its origin. We believe a great cup of tea can cross borders and connect cultures.
         </p>
         <div class="about__stats">
           <div class="about__stat">
-            <div class="about__stat-number">6+</div>
-            <div class="about__stat-label">名茶品种</div>
+            <div class="about__stat-number" data-i18n="about_stat_1_num">6+</div>
+            <div class="about__stat-label" data-i18n="about_stat_1_lbl">Tea Varieties</div>
           </div>
           <div class="about__stat">
-            <div class="about__stat-number">5</div>
-            <div class="about__stat-label">中国核心茶区</div>
+            <div class="about__stat-number" data-i18n="about_stat_2_num">5</div>
+            <div class="about__stat-label" data-i18n="about_stat_2_lbl">Premium Tea Regions</div>
           </div>
           <div class="about__stat">
-            <div class="about__stat-number">50+</div>
-            <div class="about__stat-label">菲律宾城市配送</div>
+            <div class="about__stat-number" data-i18n="about_stat_3_num">50+</div>
+            <div class="about__stat-label" data-i18n="about_stat_3_lbl">Cities Served in PH</div>
           </div>
         </div>
       </div>
@@ -143,16 +139,15 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Get In Touch</span>
-        <h2>联系我们</h2>
-        <p class="section-desc">对茶叶有疑问？想批量订购？或者只是想聊聊天？我们很乐意听到你的声音。</p>
+        <span class="section-tag" data-i18n="contact_tag">Get In Touch</span>
+        <h2 data-i18n="contact_title">Contact Us</h2>
+        <p class="section-desc" data-i18n="contact_desc">Have questions about our teas? Interested in bulk orders? Or just want to say hello — we'd love to hear from you.</p>
       </div>
       <div class="contact__inner">
         <div class="contact__info reveal">
-          <h3>让我们帮你找到<br/>最适合的那杯茶</h3>
-          <p>
-            无论是送礼还是自饮，我们都能为你推荐最合适的茶款。
-            也可以通过 Shopee 直接下单，享受快捷配送。
+          <h3 data-i18n="contact_heading">Let us help you find<br/>the perfect cup of tea</h3>
+          <p data-i18n="contact_body">
+            Whether you're buying a gift or stocking your own pantry, we'll recommend the right tea for you. You can also order directly on Shopee for fast delivery.
           </p>
           <div class="contact__details">
             <div class="contact__detail">
@@ -171,44 +166,44 @@
           <div class="contact__shopee">
             <div class="contact__shopee-icon">🛒</div>
             <div class="contact__shopee-text">
-              <strong>Shopee 旗舰店</strong>
-              <span>立即下单，最快 3 天送达</span>
+              <strong data-i18n="contact_shopee_title">Shopee Flagship Store</strong>
+              <span data-i18n="contact_shopee_sub">Order now, delivered in 3 days</span>
             </div>
-            <a href="#" class="btn btn-green btn-sm">去购买 →</a>
+            <a href="#" class="btn btn-green btn-sm" data-i18n="contact_shopee_btn">Shop Now →</a>
           </div>
         </div>
         <form class="contact__form reveal reveal-delay-1" id="contactForm">
           <div class="form-row">
             <div class="form-group">
-              <label for="name">姓名 *</label>
-              <input type="text" id="name" name="name" required placeholder="您的姓名" />
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
             </div>
             <div class="form-group">
-              <label for="email">邮箱 *</label>
+              <label for="email">Email *</label>
               <input type="email" id="email" name="email" required placeholder="your@email.com" />
             </div>
           </div>
           <div class="form-group">
-            <label for="phone">电话</label>
+            <label for="phone">Phone</label>
             <input type="tel" id="phone" name="phone" placeholder="+63 9XX XXX XXXX" />
           </div>
           <div class="form-group">
-            <label for="product">感兴趣的产品</label>
+            <label for="product">Interested in</label>
             <select id="product" name="product">
-              <option value="">请选择...</option>
-              <option value="tgy">铁观音 Tie Guan Yin</option>
-              <option value="lj">龙井 Long Jing</option>
-              <option value="per">普洱 Pu-erh</option>
-              <option value="ml">茉莉花茶 Jasmine Tea</option>
-              <option value="hc">红茶 Black Tea</option>
-              <option value="bc">白茶 White Tea</option>
+              <option value="">Select a tea...</option>
+              <option value="tgy">Tie Guan Yin 铁观音</option>
+              <option value="lj">Long Jing 龙井</option>
+              <option value="per">Pu-erh 普洱</option>
+              <option value="ml">Jasmine Tea 茉莉花茶</option>
+              <option value="hc">Black Tea 红茶</option>
+              <option value="bc">White Tea 白茶</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">留言</label>
-            <textarea id="message" name="message" placeholder="有什么想对我们说的？"></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what's on your mind..."></textarea>
           </div>
-          <button type="submit" class="btn btn-green form-submit">发送消息</button>
+          <button type="submit" class="btn btn-green form-submit">Send Message</button>
         </form>
       </div>
     </div>
@@ -220,27 +215,27 @@
       <div class="footer__inner">
         <div class="footer__brand">
           <h3>Tea<span>Origin</span></h3>
-          <p>正宗中国茶叶，直送菲律宾。从茶山到茶杯，我们用心甄选每一片茶叶。</p>
+          <p data-i18n="footer_desc">Authentic Chinese tea, delivered to your door in the Philippines. From tea mountain to teacup — we select every leaf with care.</p>
         </div>
         <div>
-          <h4 class="footer__heading">快捷链接</h4>
+          <h4 class="footer__heading" data-i18n="footer_quick">Quick Links</h4>
           <ul class="footer__links">
-            <li><a href="#products" class="footer__link">我们的茶</a></li>
-            <li><a href="#about" class="footer__link">品牌故事</a></li>
-            <li><a href="#contact" class="footer__link">联系我们</a></li>
+            <li><a href="#products" class="footer__link" data-i18n="footer_our_teas">Our Teas</a></li>
+            <li><a href="#about" class="footer__link" data-i18n="footer_our_story">Our Story</a></li>
+            <li><a href="#contact" class="footer__link" data-i18n="footer_contact">Contact Us</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="footer__heading">关注我们</h4>
+          <h4 class="footer__heading" data-i18n="footer_follow">Follow Us</h4>
           <ul class="footer__links">
-            <li><a href="#" class="footer__link">Shopee 店铺</a></li>
+            <li><a href="#" class="footer__link" data-i18n="footer_shopee">Shopee Store</a></li>
             <li><a href="#" class="footer__link">Facebook</a></li>
             <li><a href="#" class="footer__link">Instagram</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>&copy; 2026 Tea Origin 茶源. All rights reserved.</span>
+        <span>&copy; 2026 Tea Origin. All rights reserved.</span>
         <span>Made with ❤️ for tea lovers in the Philippines</span>
       </div>
     </div>
