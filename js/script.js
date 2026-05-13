@@ -4,6 +4,7 @@
 
 const i18n = {
   // Nav
+  brand_name:       { en: 'Tea<span>Origin</span>', zh: '茶源' },
   nav_products:     { en: 'Our Teas',        zh: '我们的茶' },
   nav_story:        { en: 'Our Story',       zh: '品牌故事' },
   nav_contact:      { en: 'Contact Us',      zh: '联系我们' },

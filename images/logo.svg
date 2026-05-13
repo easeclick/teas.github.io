@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a7c59" />
+      <stop offset="100%" stop-color="#2d5a3b" />
+    </linearGradient>
+  </defs>
+  <!-- Tea leaf shape -->
+  <path d="M100 10 C60 30, 30 70, 30 110 C30 155, 65 185, 100 195 C135 185, 170 155, 170 110 C170 70, 140 30, 100 10Z"
+        fill="url(#leafGrad)" opacity="0.9"/>
+  <!-- Center vein -->
+  <path d="M100 25 L100 180" stroke="#e8d5b7" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <!-- Side veins - left -->
+  <path d="M100 50 L70 45" stroke="#e8d5b7" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <path d="M100 75 L55 80" stroke="#e8d5b7" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <path d="M100 100 L50 110" stroke="#e8d5b7" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <path d="M100 125 L55 140" stroke="#e8d5b7" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <path d="M100 150 L70 160" stroke="#e8d5b7" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <!-- Side veins - right -->
+  <path d="M100 50 L130 45" stroke="#e8d5b7" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <path d="M100 75 L145 80" stroke="#e8d5b7" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <path d="M100 100 L150 110" stroke="#e8d5b7" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <path d="M100 125 L145 140" stroke="#e8d5b7" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <path d="M100 150 L130 160" stroke="#e8d5b7" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+  <!-- Small curl at top (stem) -->
+  <path d="M100 10 C100 2, 95 -2, 90 0" stroke="#5a3d2b" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>

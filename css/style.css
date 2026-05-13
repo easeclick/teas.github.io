@@ -159,11 +159,20 @@ h2 {
 }
 
 .nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--green-deep);
   letter-spacing: -0.5px;
+}
+
+.nav__logo-img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
 }
 
 .nav__logo span { color: var(--gold); }
@@ -924,6 +933,9 @@ h2 {
 }
 
 .footer__brand h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   color: var(--white);
@@ -931,6 +943,12 @@ h2 {
 }
 
 .footer__brand h3 span { color: var(--gold); }
+
+.footer__logo-img {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
 
 .footer__brand p {
   font-size: 0.9rem;
