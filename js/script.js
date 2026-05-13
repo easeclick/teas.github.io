@@ -92,46 +92,7 @@ const i18n = {
 
 // Product data
 const products = [
-  {
-    id: 1, slug: 'tgy',
-    name: '铁观音', nameEn: 'Tie Guan Yin',
-    emoji: '\uD83D\uDD52',
-    origin: '福建安溪', originEn: 'Anxi, Fujian',
-    desc: '兰花香持久，七泡有余香。传统碳焙工艺，茶汤金黄透亮，回甘悠长。产自福建安溪海拔600米以上高山茶园，半发酵工艺造就独特的兰花香气——入口清雅，回味甘甜。其名源于美丽传说：一位虔诚的茶农因梦中受观音点化，在铁铸观音像后发现此茶树。建议100°C沸水冲泡，可连续冲泡7次以上，每一泡都有不同的风味变化。',
-    descEn: 'Lasting orchid fragrance with a rich sweet finish. Traditional charcoal roast produces a golden amber liquor with remarkable depth. Grown in the misty high-mountain tea gardens of Anxi, Fujian, this semi-fermented oolong reveals new layers with each infusion. The name comes from an old legend — an iron statue of the goddess Guanyin inspired the farmer who discovered this tea. Brew with 100°C water; this tea rewards you with 7+ infusions, each revealing a different facet of its character.',
-    price: '\u20B1450', unit: '/100g',
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=600&q=80'
-  },
-  {
-    id: 2, slug: 'lj',
-    name: '龙井绿茶', nameEn: 'Long Jing',
-    emoji: '\uD83C\uDF31',
-    origin: '浙江杭州', originEn: 'Hangzhou, Zhejiang',
-    desc: '清香鲜爽，色泽翠绿。西湖产区明前采摘，传统锅炒工艺赋予其独特的板栗香，口感甘醇鲜爽。每片茶叶都是手工在高温铁锅中压扁成型——这项技艺已传承数百年。作为中国第一贡茶，龙井被历代帝王推崇千年。建议80°C水冲泡，避免高温破坏其鲜嫩风味。',
-    descEn: 'Fresh and clean with a vibrant jade color. Pre-Ming harvest from the West Lake region, this pan-fired green tea delivers a distinctive nutty chestnut aroma and a smooth, sweet taste. Each leaf is hand-pressed flat in the traditional wok-firing process — a technique passed down for centuries. Known as China\'s first imperial tea, Long Jing has been prized by emperors for over a thousand years. Brew with 80°C water to preserve its delicate flavor.',
-    price: '\u20B1520', unit: '/100g',
-    image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80'
-  },
-  {
-    id: 3, slug: 'per',
-    name: '普洱茶', nameEn: 'Pu-erh',
-    emoji: '\uD83D\uDED6',
-    origin: '云南普洱', originEn: "Pu'er, Yunnan",
-    desc: '越陈越香，醇厚顺滑。采用云南深山古树原料，独特的后发酵工艺使其越陈越醇——汤色红浓明亮，入口陈香扑鼻，回味甘甜。如同红酒，普洱存放越久越珍贵，被誉为"能喝的古董"。在中国饮食文化中，普洱被视为餐后助消化的佳品。建议沸水冲泡，先润茶一次，可冲泡5次以上，从浓烈渐变为甘甜。',
-    descEn: 'Aged to perfection, smooth and mellow. Made from ancient tree leaves in Yunnan\'s deep mountains, this post-fermented tea develops a deep red liquor with earthy, woody notes and a clean, sweet finish. Like fine wine, Pu-erh improves with age — often called "a liquid antique." Prized in Chinese culture as a digestive aid after rich meals. Rinse the leaves once with boiling water before brewing, then enjoy 5+ infusions that evolve from robust to sweet.',
-    price: '\u20B1380', unit: '/100g',
-    image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=600&q=80'
-  },
-  {
-    id: 4, slug: 'ml',
-    name: '茉莉花茶', nameEn: 'Jasmine Tea',
-    emoji: '\uD83C\uDF38',
-    origin: '福建福州', originEn: 'Fuzhou, Fujian',
-    desc: '清新怡人，花香入骨。精选优质绿茶茶坯，与新鲜茉莉花层层窨制，让茶叶在夜间充分吸收花香——这道工序最多重复七次。成品茶只见茶形不见花影，花香却深入骨髓，没有任何人工香精。建议85°C水冲泡，看茶叶在水中慢慢舒展，释放出清雅怡人的茉莉芬芳。午后一杯，静心宁神。',
-    descEn: 'Light and refreshing with intoxicating jasmine fragrance. Fine green tea leaves are layered with fresh jasmine blossoms and left to absorb the fragrance overnight — a process repeated up to seven times. The result is a tea that carries the true essence of jasmine without any artificial flavoring, with the blossoms themselves removed after scenting. Brew with 85°C water and watch the leaves unfurl, releasing their delicate floral aroma. The perfect afternoon tea to calm the mind.',
-    price: '\u20B1320', unit: '/100g',
-    image: 'https://images.unsplash.com/photo-1563911892437-1feda0179e1b?w=600&q=80'
-  },
+  // 1. 红茶
   {
     id: 5, slug: 'hc',
     name: '红茶', nameEn: 'Black Tea',
@@ -142,6 +103,18 @@ const products = [
     price: '\u20B1360', unit: '/100g',
     image: 'https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?w=600&q=80'
   },
+  // 2. 绿茶
+  {
+    id: 2, slug: 'lj',
+    name: '龙井绿茶', nameEn: 'Long Jing',
+    emoji: '\uD83C\uDF31',
+    origin: '浙江杭州', originEn: 'Hangzhou, Zhejiang',
+    desc: '清香鲜爽，色泽翠绿。西湖产区明前采摘，传统锅炒工艺赋予其独特的板栗香，口感甘醇鲜爽。每片茶叶都是手工在高温铁锅中压扁成型——这项技艺已传承数百年。作为中国第一贡茶，龙井被历代帝王推崇千年。建议80°C水冲泡，避免高温破坏其鲜嫩风味。',
+    descEn: 'Fresh and clean with a vibrant jade color. Pre-Ming harvest from the West Lake region, this pan-fired green tea delivers a distinctive nutty chestnut aroma and a smooth, sweet taste. Each leaf is hand-pressed flat in the traditional wok-firing process — a technique passed down for centuries. Known as China\'s first imperial tea, Long Jing has been prized by emperors for over a thousand years. Brew with 80°C water to preserve its delicate flavor.',
+    price: '\u20B1520', unit: '/100g',
+    image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80'
+  },
+  // 3. 白茶
   {
     id: 6, slug: 'bc',
     name: '白茶', nameEn: 'White Tea',
@@ -151,6 +124,39 @@ const products = [
     descEn: 'Naturally withered, ages gracefully. The least processed of all teas, white tea is simply picked and gently dried under the sun. Silver buds coated in fine down produce a pale apricot-colored liquor with a subtle, honeyed sweetness. As it ages, the flavor deepens and develops notes of dried fruit and herbs — much like a fine wine. Rich in antioxidants, it\'s the perfect choice for both its delicate taste and health benefits. Brew at 85°C.',
     price: '\u20B1580', unit: '/100g',
     image: 'https://images.unsplash.com/photo-1594134858547-8b126843389e?w=600&q=80'
+  },
+  // 4. 铁观音
+  {
+    id: 1, slug: 'tgy',
+    name: '铁观音', nameEn: 'Tie Guan Yin',
+    emoji: '\uD83D\uDD52',
+    origin: '福建安溪', originEn: 'Anxi, Fujian',
+    desc: '兰花香持久，七泡有余香。传统碳焙工艺，茶汤金黄透亮，回甘悠长。产自福建安溪海拔600米以上高山茶园，半发酵工艺造就独特的兰花香气——入口清雅，回味甘甜。其名源于美丽传说：一位虔诚的茶农因梦中受观音点化，在铁铸观音像后发现此茶树。建议100°C沸水冲泡，可连续冲泡7次以上，每一泡都有不同的风味变化。',
+    descEn: 'Lasting orchid fragrance with a rich sweet finish. Traditional charcoal roast produces a golden amber liquor with remarkable depth. Grown in the misty high-mountain tea gardens of Anxi, Fujian, this semi-fermented oolong reveals new layers with each infusion. The name comes from an old legend — an iron statue of the goddess Guanyin inspired the farmer who discovered this tea. Brew with 100°C water; this tea rewards you with 7+ infusions, each revealing a different facet of its character.',
+    price: '\u20B1450', unit: '/100g',
+    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=600&q=80'
+  },
+  // 5. 普洱
+  {
+    id: 3, slug: 'per',
+    name: '普洱茶', nameEn: 'Pu-erh',
+    emoji: '\uD83D\uDED6',
+    origin: '云南普洱', originEn: "Pu'er, Yunnan",
+    desc: '越陈越香，醇厚顺滑。采用云南深山古树原料，独特的后发酵工艺使其越陈越醇——汤色红浓明亮，入口陈香扑鼻，回味甘甜。如同红酒，普洱存放越久越珍贵，被誉为"能喝的古董"。在中国饮食文化中，普洱被视为餐后助消化的佳品。建议沸水冲泡，先润茶一次，可冲泡5次以上，从浓烈渐变为甘甜。',
+    descEn: 'Aged to perfection, smooth and mellow. Made from ancient tree leaves in Yunnan\'s deep mountains, this post-fermented tea develops a deep red liquor with earthy, woody notes and a clean, sweet finish. Like fine wine, Pu-erh improves with age — often called "a liquid antique." Prized in Chinese culture as a digestive aid after rich meals. Rinse the leaves once with boiling water before brewing, then enjoy 5+ infusions that evolve from robust to sweet.',
+    price: '\u20B1380', unit: '/100g',
+    image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=600&q=80'
+  },
+  // 6. 茉莉花茶
+  {
+    id: 4, slug: 'ml',
+    name: '茉莉花茶', nameEn: 'Jasmine Tea',
+    emoji: '\uD83C\uDF38',
+    origin: '福建福州', originEn: 'Fuzhou, Fujian',
+    desc: '清新怡人，花香入骨。精选优质绿茶茶坯，与新鲜茉莉花层层窨制，让茶叶在夜间充分吸收花香——这道工序最多重复七次。成品茶只见茶形不见花影，花香却深入骨髓，没有任何人工香精。建议85°C水冲泡，看茶叶在水中慢慢舒展，释放出清雅怡人的茉莉芬芳。午后一杯，静心宁神。',
+    descEn: 'Light and refreshing with intoxicating jasmine fragrance. Fine green tea leaves are layered with fresh jasmine blossoms and left to absorb the fragrance overnight — a process repeated up to seven times. The result is a tea that carries the true essence of jasmine without any artificial flavoring, with the blossoms themselves removed after scenting. Brew with 85°C water and watch the leaves unfurl, releasing their delicate floral aroma. The perfect afternoon tea to calm the mind.',
+    price: '\u20B1320', unit: '/100g',
+    image: 'https://images.unsplash.com/photo-1563911892437-1feda0179e1b?w=600&q=80'
   }
 ];
 
@@ -432,6 +438,7 @@ contactForm.addEventListener('submit', async (e) => {
 // ─── Background Music ────────────────────────────
 
 const bgMusic = document.getElementById('bgMusic');
+bgMusic.volume = 0.3;
 const musicToggle = document.getElementById('musicToggle');
 let musicStarted = false;
 
@@ -448,8 +455,7 @@ function updateMusicUI(playing) {
 function startMusic() {
   if (musicStarted) return;
   musicStarted = true;
-  const shouldPlay = musicPref !== 'off';
-  if (shouldPlay) {
+  if (musicPref !== 'off') {
     bgMusic.play().then(() => updateMusicUI(true)).catch(() => updateMusicUI(false));
   } else {
     updateMusicUI(false);
@@ -457,12 +463,17 @@ function startMusic() {
 }
 
 // First user interaction starts music (browsers block autoplay)
+// Skip if the first click is the toggle button itself — its own handler manages playback
 ['click', 'touchstart', 'keydown'].forEach(evt => {
-  document.addEventListener(evt, startMusic, { once: true });
+  document.addEventListener(evt, function handler(e) {
+    if (e.target?.closest?.('#musicToggle')) return;
+    startMusic();
+  }, { once: true });
 });
 
 musicToggle.addEventListener('click', (e) => {
   e.stopPropagation();
+  if (!musicStarted) musicStarted = true;
   if (bgMusic.paused) {
     bgMusic.play().then(() => {
       updateMusicUI(true);
@@ -474,6 +485,19 @@ musicToggle.addEventListener('click', (e) => {
     try { localStorage.setItem('teorigin_music', 'off'); } catch (_) {}
   }
 });
+
+// ─── Hero Slideshow ────────────────────────────
+
+(() => {
+  const slides = document.querySelectorAll('.hero__slide');
+  if (slides.length < 2) return;
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 5000);
+})();
 
 // ─── Bootstrap ──────────────────────────────────
 
