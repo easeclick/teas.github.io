@@ -1111,7 +1111,7 @@ h2 {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: none;
+  border: 2px solid var(--gold);
   background: rgba(26, 74, 42, 0.85);
   color: var(--gold);
   cursor: pointer;
@@ -1130,31 +1130,46 @@ h2 {
   box-shadow: 0 4px 20px rgba(26, 74, 42, 0.4);
 }
 
-.music-toggle:active {
-  transform: scale(0.95);
+.music-toggle__icon {
+  font-size: 20px;
+  line-height: 1;
+  display: block;
+  position: relative;
+}
+
+/* Playing: gentle bounce */
+.music-toggle.playing .music-toggle__icon {
+  animation: musicBounce 1s ease-in-out infinite;
+}
+
+/* Muted: diagonal slash */
+.music-toggle.muted::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 2.5px;
+  background: currentColor;
+  border-radius: 2px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  opacity: 0.8;
 }
 
 .music-toggle.muted {
-  background: rgba(26, 74, 42, 0.4);
-  color: rgba(255,255,255,0.5);
+  background: rgba(26, 74, 42, 0.3);
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .music-toggle.muted .music-toggle__icon {
-  animation: none;
   opacity: 0.5;
+  animation: none;
 }
 
-.music-toggle__icon {
-  display: block;
-}
-
-.music-toggle.playing .music-toggle__icon {
-  animation: musicSpin 4s linear infinite;
-}
-
-@keyframes musicSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes musicBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 @media (max-width: 768px) {
@@ -1163,5 +1178,8 @@ h2 {
     right: 16px;
     width: 40px;
     height: 40px;
+  }
+  .music-toggle__icon {
+    font-size: 18px;
   }
 }
