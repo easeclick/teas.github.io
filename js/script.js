@@ -339,7 +339,10 @@ navToggle.addEventListener('click', () => {
   document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
 });
 
-navOverlay.addEventListener('click', () => {
+document.addEventListener('click', (e) => {
+  if (!navLinks.classList.contains('active')) return;
+  if (navLinks.contains(e.target)) return;
+  if (navToggle.contains(e.target)) return;
   navToggle.classList.remove('active');
   navLinks.classList.remove('active');
   navOverlay.classList.remove('active');
