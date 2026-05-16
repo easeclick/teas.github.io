@@ -1,94 +1,107 @@
 // ============================================
-// Tea Origin — i18n Dictionary & Language System
+// 茶源记 — i18n Dictionary & Language System
 // ============================================
 
 const i18n = {
   // Nav
-  brand_name:       { en: 'Tea<span>Origin</span>', zh: '茶源' },
-  nav_products:     { en: 'Our Teas',        zh: '我们的茶' },
-  nav_story:        { en: 'Our Story',       zh: '品牌故事' },
-  nav_contact:      { en: 'Contact Us',      zh: '联系我们' },
-  nav_shopee:       { en: 'Shopee →',        zh: 'Shopee 购买 →' },
+  brand_name:       { en: 'Tea<span>Origin</span>', zh: '茶源记', fil: 'Tea<span>Origin</span>' },
+  copyright:        { en: '&copy; 2026 Tea Origin. All rights reserved.', zh: '&copy; 2026 茶源记. 保留所有权利', fil: '&copy; 2026 Tea Origin. Lahat ng karapatan ay nakalaan.' },
+  nav_products:     { en: 'Our Teas',        zh: '我们的茶',        fil: 'Aming mga Tsaa' },
+  nav_story:        { en: 'Our Story',       zh: '品牌故事',         fil: 'Aming Kuwento' },
+  nav_contact:      { en: 'Contact Us',      zh: '联系我们',         fil: 'Makipag-ugnayan' },
+  nav_shopee:       { en: 'Shopee →',        zh: 'Shopee 购买 →',   fil: 'Shopee →' },
 
   // Hero
-  hero_badge:       { en: 'Direct to Philippines',          zh: '直运菲律宾 · Direct to Philippines' },
-  hero_title_1:     { en: 'Authentic Chinese Tea',          zh: '正宗中国茶叶' },
-  hero_title_2:     { en: 'A Cup of <span>Tea Origin</span>, Taste the East',  zh: '一杯 <span>茶源</span>，品味东方' },
+  hero_badge:       { en: 'Direct to Philippines',          zh: '直运菲律宾 · Direct to Philippines',  fil: 'Diretso sa Pilipinas' },
+  hero_title_1:     { en: 'Authentic Chinese Tea',          zh: '正宗中国茶叶',                          fil: 'Tunay na Chinese Tea' },
+  hero_title_2:     { en: 'A Cup of <span>Tea Origin</span>, Taste the East',  zh: '一杯 <span>茶源记</span>，品味东方',  fil: 'Isang Tasa ng <span>Tea Origin</span>, Tikman ang Silangan' },
   hero_subtitle:    { en: 'From China\'s most famous tea regions to your cup. The orchid fragrance of Tie Guan Yin, the fresh briskness of Long Jing, the deep richness of Pu-erh — every leaf is carefully selected and shipped directly to the Philippines.',
-                       zh: '从中国名茶产地到您的茶杯。铁观音的兰花香、龙井的鲜爽、普洱的醇厚——每一片茶叶都精心甄选，直送菲律宾。' },
-  hero_btn_primary: { en: 'Explore Our Teas',               zh: '探索我们的茶' },
-  hero_btn_shopee:  { en: 'Shop on Shopee →',               zh: 'Shopee 购买 →' },
+                       zh: '从中国名茶产地到您的茶杯。铁观音的兰花香、龙井的鲜爽、普洱的醇厚——每一片茶叶都精心甄选，直送菲律宾。',
+                       fil: 'Mula sa pinakasikat na rehiyon ng tsaa sa Tsina hanggang sa iyong tasa. Ang bango ng orkid ng Tie Guan Yin, ang sariwang lasa ng Long Jing, ang malalim na yaman ng Pu-erh — bawat dahon ay maingat na pinipili at direktang ipinapadala sa Pilipinas.' },
+  hero_btn_primary: { en: 'Explore Our Teas',               zh: '探索我们的茶',     fil: 'Tuklasin ang Aming mga Tsaa' },
+  hero_btn_shopee:  { en: 'Shop on Shopee →',               zh: 'Shopee 购买 →',   fil: 'Bumili sa Shopee →' },
 
   // Features
-  feat_1_title:     { en: 'Direct from Source',             zh: '源头直供' },
+  feat_1_title:     { en: 'Direct from Source',             zh: '源头直供',   fil: 'Diretso mula sa Pinagmulan' },
   feat_1_desc:      { en: 'Sourced from China\'s premier tea regions — Anxi, Hangzhou, Yunnan — ensuring every leaf meets the highest quality standards.',
-                       zh: '精选中国核心茶产区，从福建安溪、浙江杭州到云南普洱，确保每一片茶叶的品质' },
-  feat_2_title:     { en: 'Delivery Across Philippines',    zh: '菲律宾全境配送' },
+                       zh: '精选中国核心茶产区，从福建安溪、浙江杭州到云南普洱，确保每一片茶叶的品质',
+                       fil: 'Galing sa mga pangunahing rehiyon ng tsaa ng Tsina — Anxi, Hangzhou, Yunnan — tinitiyak na ang bawat dahon ay nakakatugon sa pinakamataas na pamantayan ng kalidad.' },
+  feat_2_title:     { en: 'Delivery Across Philippines',    zh: '菲律宾全境配送',      fil: 'Nagdedeliver sa Buong Pilipinas' },
   feat_2_desc:      { en: 'Serving Manila, Cebu, Davao and nationwide. Free shipping on orders over ₱999, delivered in 3–5 days.',
-                       zh: '马尼拉、宿务、达沃全菲配送，订单满 ₱999 免运费，3-5 日送达' },
-  feat_3_title:     { en: 'Quality Guaranteed',             zh: '品质保证' },
+                       zh: '马尼拉、宿务、达沃全菲配送，订单满 ₱999 免运费，3-5 日送达',
+                       fil: 'Naghahatid sa Manila, Cebu, Davao at sa buong bansa. Libreng shipping sa mga order na ₱999 pataas, naihahatid sa loob ng 3–5 araw.' },
+  feat_3_title:     { en: 'Quality Guaranteed',             zh: '品质保证',   fil: 'Garantisadong Kalidad' },
   feat_3_desc:      { en: 'Vacuum-sealed packaging locks in freshness. Not satisfied? Returns and exchanges are always无条件 — your satisfaction is our promise.',
-                       zh: '真空密封包装，锁住新鲜。不满意无条件退换，您的满意是我们的承诺' },
+                       zh: '真空密封包装，锁住新鲜。不满意无条件退换，您的满意是我们的承诺',
+                       fil: 'Vacuum-sealed na packaging upang mapanatili ang kasariwaan. Hindi nasiyahan? Pwedeng ibalik o palitan anumang oras — ang iyong kasiyahan ang aming pangako.' },
 
   // Products Section
-  products_tag:     { en: 'Our Selection',                  zh: 'Our Selection' },
-  products_title:   { en: 'Premium Selection',              zh: '精选好茶' },
+  products_tag:     { en: 'Our Selection',                  zh: 'Our Selection',       fil: 'Aming Napili' },
+  products_title:   { en: 'Premium Selection',              zh: '精选好茶',              fil: 'Premium na Pili' },
   products_desc:    { en: 'Six classic Chinese teas, each one sourced directly from its origin. Quality guaranteed.',
-                       zh: '六大经典中国名茶，总有一款适合你。每款都是原产地直供，品质保证。' },
+                       zh: '六大经典中国名茶，总有一款适合你。每款都是原产地直供，品质保证。',
+                       fil: 'Anim na klasikong Chinese tea, bawat isa ay direktang galing sa pinagmulan. Garantisadong kalidad.' },
 
   // About Section
-  about_tag:        { en: 'Our Story',                      zh: 'Our Story' },
+  about_tag:        { en: 'Our Story',                      zh: 'Our Story',              fil: 'Aming Kuwento' },
   about_title:      { en: 'From China\'s Tea Mountains<br/>to Your Cup in the Philippines',
-                       zh: '从中国茶山<br/>到菲律宾茶杯' },
+                       zh: '从中国茶山<br/>到菲律宾茶杯',
+                       fil: 'Mula sa Mga Bundok ng Tsaa ng Tsina<br/>hanggang sa Iyong Tasa sa Pilipinas' },
   about_p1:         { en: 'Tea Origin was born from a simple idea — let tea lovers in the Philippines taste the most authentic Chinese tea. We travel to China\'s most renowned tea regions and partner with multi-generational tea farmers who pour their craft into every harvest.',
-                       zh: 'Tea Origin 茶源诞生于一个简单的想法——让菲律宾的茶爱好者品尝到最正宗的中国茶。我们深入中国最负盛名的茶产区，与世代制茶的茶农合作，精心挑选每一批茶叶。' },
+                       zh: '茶源记诞生于一个简单的想法——让菲律宾的茶爱好者品尝到最正宗的中国茶。我们深入中国最负盛名的茶产区，与世代制茶的茶农合作，精心挑选每一批茶叶。',
+                       fil: 'Ang Tea Origin ay isinilang mula sa isang simpleng ideya — hayaang matikman ng mga mahilig sa tsaa sa Pilipinas ang pinaka-tunay na Chinese tea. Naglalakbay kami sa pinakasikat na mga rehiyon ng tsaa ng Tsina at nakikipagsosyo sa mga magsasaka ng tsaa na ilang henerasyon nang nagtatanim at nag-aalaga ng bawat ani.' },
   about_p2:         { en: 'From Tie Guan Yin in Anxi, Fujian to Long Jing at West Lake, Hangzhou, and ancient-tree Pu-erh deep in Yunnan — each tea carries the story of its origin. We believe a great cup of tea can cross borders and connect cultures.',
-                       zh: '从福建安溪的铁观音、杭州西湖的龙井，到云南深山的古树普洱——每款茶都承载着它的产地故事和文化底蕴。我们相信，一杯好茶能跨越国界，连接不同的文化与心灵。' },
-  about_stat_1_num: { en: '6+',                              zh: '6+' },
-  about_stat_1_lbl: { en: 'Tea Varieties',                  zh: '名茶品种' },
-  about_stat_2_num: { en: '5',                               zh: '5' },
-  about_stat_2_lbl: { en: 'Premium Tea Regions',            zh: '中国核心茶区' },
-  about_stat_3_num: { en: '50+',                             zh: '50+' },
-  about_stat_3_lbl: { en: 'Cities Served in PH',            zh: '菲律宾城市配送' },
+                       zh: '从福建安溪的铁观音、杭州西湖的龙井，到云南深山的古树普洱——每款茶都承载着它的产地故事和文化底蕴。我们相信，一杯好茶能跨越国界，连接不同的文化与心灵。',
+                       fil: 'Mula sa Tie Guan Yin sa Anxi, Fujian hanggang sa Long Jing sa West Lake, Hangzhou, at sa sinaunang-punong Pu-erh sa Yunnan — bawat tsaa ay may dalang kuwento ng pinagmulan nito. Naniniwala kami na ang isang mahusay na tasa ng tsaa ay maaaring tumawid sa mga hangganan at mag-ugnay ng mga kultura.' },
+  about_stat_1_num: { en: '6+',                              zh: '6+',                     fil: '6+' },
+  about_stat_1_lbl: { en: 'Tea Varieties',                  zh: '名茶品种',                fil: 'Mga Uri ng Tsaa' },
+  about_stat_2_num: { en: '5',                               zh: '5',                      fil: '5' },
+  about_stat_2_lbl: { en: 'Premium Tea Regions',            zh: '中国核心茶区',             fil: 'Pangunahing Rehiyon ng Tsaa' },
+  about_stat_3_num: { en: '50+',                             zh: '50+',                    fil: '50+' },
+  about_stat_3_lbl: { en: 'Cities Served in PH',            zh: '菲律宾城市配送',           fil: 'Lungsod na Pinaglilingkuran sa PH' },
 
   // Contact Section
-  contact_tag:      { en: 'Get In Touch',                   zh: 'Get In Touch' },
-  contact_title:    { en: 'Contact Us',                     zh: '联系我们' },
+  contact_tag:      { en: 'Get In Touch',                   zh: 'Get In Touch',        fil: 'Makipag-ugnayan' },
+  contact_title:    { en: 'Contact Us',                     zh: '联系我们',              fil: 'Makipag-ugnayan sa Amin' },
   contact_desc:     { en: 'Have questions about our teas? Interested in bulk orders? Or just want to say hello — we\'d love to hear from you.',
-                       zh: '对茶叶有疑问？想批量订购？或者只是想聊聊天？我们很乐意听到你的声音。' },
+                       zh: '对茶叶有疑问？想批量订购？或者只是想聊聊天？我们很乐意听到你的声音。',
+                       fil: 'May mga tanong tungkol sa aming mga tsaa? Interesado sa maramihang order? O gusto lang bumati — gusto naming marinig mula sa iyo.' },
   contact_heading:  { en: 'Let us help you find<br/>the perfect cup of tea',
-                       zh: '让我们帮你找到<br/>最适合的那杯茶' },
+                       zh: '让我们帮你找到<br/>最适合的那杯茶',
+                       fil: 'Tulungan ka naming mahanap<br/>ang perpektong tasa ng tsaa' },
   contact_body:     { en: 'Whether you\'re buying a gift or stocking your own pantry, we\'ll recommend the right tea for you. You can also order directly on Shopee for fast delivery.',
-                       zh: '无论是送礼还是自饮，我们都能为你推荐最合适的茶款。也可以通过 Shopee 直接下单，享受快捷配送。' },
-  contact_shopee_title: { en: 'Shopee Flagship Store',      zh: 'Shopee 旗舰店' },
-  contact_shopee_sub:   { en: 'Order now, delivered in 3 days',  zh: '立即下单，最快 3 天送达' },
-  contact_shopee_btn:   { en: 'Shop Now →',                zh: '去购买 →' },
+                       zh: '无论是送礼还是自饮，我们都能为你推荐最合适的茶款。也可以通过 Shopee 直接下单，享受快捷配送。',
+                       fil: 'Kung ikaw ay bumibili ng regalo o nag-iimbak para sa iyong sarili, irerekumenda namin ang tamang tsaa para sa iyo. Maaari ka ring umorder nang direkta sa Shopee para sa mabilis na paghahatid.' },
+  contact_shopee_title: { en: 'Shopee Flagship Store',      zh: 'Shopee 旗舰店',        fil: 'Shopee Flagship Store' },
+  contact_shopee_sub:   { en: 'Order now, delivered in 3 days',  zh: '立即下单，最快 3 天送达',  fil: 'Umorder na ngayon, maihahatid sa loob ng 3 araw' },
+  contact_shopee_btn:   { en: 'Shop Now →',                zh: '去购买 →',             fil: 'Bumili Na →' },
 
   // Form
-  form_name:        { en: 'Name *',                         zh: '姓名 *' },
-  form_name_ph:     { en: 'Your name',                      zh: '您的姓名' },
-  form_email:       { en: 'Email *',                        zh: '邮箱 *' },
-  form_email_ph:    { en: 'your@email.com',                 zh: 'your@email.com' },
-  form_phone:       { en: 'Phone',                          zh: '电话' },
-  form_phone_ph:    { en: '+63 9XX XXX XXXX',               zh: '+63 9XX XXX XXXX' },
-  form_product:     { en: 'Interested in',                  zh: '感兴趣的产品' },
-  form_product_ph:  { en: 'Select a tea...',                zh: '请选择...' },
-  form_message:     { en: 'Message',                        zh: '留言' },
-  form_message_ph:  { en: 'Tell us what\'s on your mind...', zh: '有什么想对我们说的？' },
-  form_submit:      { en: 'Send Message',                   zh: '发送消息' },
-  form_sending:     { en: 'Sending...',                     zh: '发送中...' },
-  form_sent:        { en: '✓ Sent!',                        zh: '✓ 已发送！' },
-  form_failed:      { en: 'Failed, please retry',           zh: '发送失败，请重试' },
+  form_name:        { en: 'Name *',                         zh: '姓名 *',                fil: 'Pangalan *' },
+  form_name_ph:     { en: 'Your name',                      zh: '您的姓名',              fil: 'Iyong pangalan' },
+  form_email:       { en: 'Email *',                        zh: '邮箱 *',                fil: 'Email *' },
+  form_email_ph:    { en: 'your@email.com',                 zh: 'your@email.com',        fil: 'iyong@email.com' },
+  form_phone:       { en: 'Phone',                          zh: '电话',                  fil: 'Telepono' },
+  form_phone_ph:    { en: '+63 9XX XXX XXXX',               zh: '+63 9XX XXX XXXX',      fil: '+63 9XX XXX XXXX' },
+  form_product:     { en: 'Interested in',                  zh: '感兴趣的产品',            fil: 'Interesado sa' },
+  form_product_ph:  { en: 'Select a tea...',                zh: '请选择...',              fil: 'Pumili ng tsaa...' },
+  form_message:     { en: 'Message',                        zh: '留言',                  fil: 'Mensahe' },
+  form_message_ph:  { en: 'Tell us what\'s on your mind...', zh: '有什么想对我们说的？',     fil: 'Sabihin mo sa amin kung ano ang nasa isip mo...' },
+  form_submit:      { en: 'Send Message',                   zh: '发送消息',              fil: 'Magpadala ng Mensahe' },
+  form_sending:     { en: 'Sending...',                     zh: '发送中...',             fil: 'Ipinapadala...' },
+  form_sent:        { en: '✓ Sent!',                        zh: '✓ 已发送！',             fil: '✓ Naipadala!' },
+  form_failed:      { en: 'Failed, please retry',           zh: '发送失败，请重试',        fil: 'Nabigo, pakisubukan muli' },
 
   // Footer
   footer_desc:      { en: 'Authentic Chinese tea, delivered to your door in the Philippines. From tea mountain to teacup — we select every leaf with care.',
-                       zh: '正宗中国茶叶，直送菲律宾。从茶山到茶杯，我们用心甄选每一片茶叶。' },
-  footer_quick:     { en: 'Quick Links',                    zh: '快捷链接' },
-  footer_our_teas:  { en: 'Our Teas',                       zh: '我们的茶' },
-  footer_our_story: { en: 'Our Story',                      zh: '品牌故事' },
-  footer_contact:   { en: 'Contact Us',                     zh: '联系我们' },
-  footer_follow:    { en: 'Follow Us',                      zh: '关注我们' },
-  footer_shopee:    { en: 'Shopee Store',                   zh: 'Shopee 店铺' },
+                       zh: '正宗中国茶叶，直送菲律宾。从茶山到茶杯，我们用心甄选每一片茶叶。',
+                       fil: 'Tunay na Chinese tea, direktang inihatid sa iyong pinto sa Pilipinas. Mula sa bundok ng tsaa hanggang sa iyong tasa — pinipili namin ang bawat dahon nang may pag-aalaga.' },
+  footer_quick:     { en: 'Quick Links',                    zh: '快捷链接',      fil: 'Mabilis na Link' },
+  footer_our_teas:  { en: 'Our Teas',                       zh: '我们的茶',      fil: 'Aming mga Tsaa' },
+  footer_our_story: { en: 'Our Story',                      zh: '品牌故事',       fil: 'Aming Kuwento' },
+  footer_contact:   { en: 'Contact Us',                     zh: '联系我们',       fil: 'Makipag-ugnayan' },
+  footer_follow:    { en: 'Follow Us',                      zh: '关注我们',       fil: 'Sumunod sa Amin' },
+  footer_shopee:    { en: 'Shopee Store',                   zh: 'Shopee 店铺',   fil: 'Shopee Store' },
 };
 
 // Product data
@@ -180,23 +193,23 @@ function renderProducts() {
       <article class="product-card${featured} reveal" style="transition-delay: ${delay}s">
         <div class="product-card__image">
           <img src="${p.image}" alt="${p.name}" loading="lazy" />
-          <span class="product-card__origin">${currentLang === 'en' ? p.originEn : p.origin}</span>
+          <span class="product-card__origin">${currentLang === 'zh' ? p.origin : p.originEn}</span>
         </div>
         <div class="product-card__body">
           <div class="product-card__header">
             <div>
               <h3 class="product-card__name">
-                <span class="product-card__emoji">${p.emoji}</span> ${currentLang === 'en' ? p.nameEn : p.name}
+                <span class="product-card__emoji">${p.emoji}</span> ${currentLang === 'zh' ? p.name : p.nameEn}
               </h3>
-              <div class="product-card__name-en">${currentLang === 'en' ? '' : p.nameEn}</div>
+              <div class="product-card__name-en">${currentLang === 'zh' ? p.nameEn : ''}</div>
             </div>
             <div class="product-card__price">${p.price}<span style="font-size:0.8rem;font-weight:400;color:var(--text-muted)">${p.unit}</span></div>
           </div>
-          <p class="product-card__desc">${currentLang === 'en' ? p.descEn : p.desc}</p>
+          <p class="product-card__desc">${currentLang === 'zh' ? p.desc : p.descEn}</p>
         </div>
         <div class="product-card__overlay">
-          <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem">${p.emoji} ${currentLang === 'en' ? p.nameEn : p.name}</h3>
-          <p>${currentLang === 'en' ? p.descEn : p.desc}</p>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem">${p.emoji} ${currentLang === 'zh' ? p.name : p.nameEn}</h3>
+          <p>${currentLang === 'zh' ? p.desc : p.descEn}</p>
           <span style="color:var(--gold);font-weight:600;font-size:1.2rem">${p.price}${p.unit}</span>
         </div>
       </article>
@@ -222,32 +235,37 @@ function setLanguage(lang) {
   });
 
   // 2. Update page-level attributes
-  document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+  const langMap = { en: 'en', zh: 'zh-CN', fil: 'fil' };
+  document.documentElement.lang = langMap[lang] || 'en';
 
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) {
     metaDesc.content = lang === 'en'
       ? 'Tea Origin — authentic Chinese tea delivered to the Philippines. Premium Tie Guan Yin, Long Jing, Pu-erh, Jasmine, Black Tea, White Tea. Direct from origin.'
-      : 'Tea Origin 茶源 — 正宗中国茶叶直送菲律宾。精选铁观音、龙井、普洱、茉莉花茶、红茶、白茶，原产地直供。';
+      : lang === 'zh'
+        ? '茶源记 — 正宗中国茶叶直送菲律宾。精选铁观音、龙井、普洱、茉莉花茶、红茶、白茶，原产地直供。'
+        : 'Tea Origin — tunay na Chinese tea na inihatid sa Pilipinas. Premium Tie Guan Yin, Long Jing, Pu-erh, Jasmine, Black Tea, White Tea. Diretso mula sa pinagmulan.';
   }
 
   const titleEl = document.querySelector('title');
   if (titleEl) {
     titleEl.textContent = lang === 'en'
       ? 'Tea Origin — Authentic Chinese Tea · Delivered to Philippines'
-      : 'Tea Origin 茶源 — 正宗中国茶叶 · 直送菲律宾';
+      : lang === 'zh'
+        ? '茶源记 — 正宗中国茶叶 · 直送菲律宾'
+        : 'Tea Origin — Tunay na Chinese Tea · Inihatid sa Pilipinas';
   }
 
   // 3. Hero alt text
   const heroImg = document.querySelector('.hero__bg img');
   if (heroImg) {
-    heroImg.alt = lang === 'en' ? 'Tea mountains' : '茶山';
+    heroImg.alt = lang === 'en' ? 'Tea mountains' : lang === 'zh' ? '茶山' : 'Mga bundok ng tsaa';
   }
 
   // 4. About image alt
   const aboutImg = document.querySelector('.about__image img');
   if (aboutImg) {
-    aboutImg.alt = lang === 'en' ? 'Chinese tea ceremony' : '中国茶道';
+    aboutImg.alt = lang === 'en' ? 'Chinese tea ceremony' : lang === 'zh' ? '中国茶道' : 'Seremonya ng tsaa ng Tsina';
   }
 
   // 5. Form labels, placeholders, selects
@@ -285,11 +303,12 @@ function setLanguage(lang) {
   // 6. Re-render product cards
   renderProducts();
 
-  // 7. Toggle button text
+  // 7. Toggle button text — shows next language
   const toggleBtn = document.getElementById('langToggle');
   if (toggleBtn) {
-    toggleBtn.textContent = lang === 'en' ? '中' : 'EN';
-    toggleBtn.setAttribute('aria-label', lang === 'en' ? 'Switch to Chinese' : 'Switch to English');
+    const next = lang === 'en' ? 'zh' : lang === 'zh' ? 'fil' : 'en';
+    toggleBtn.textContent = next === 'en' ? 'EN' : next === 'zh' ? '中' : 'FIL';
+    toggleBtn.setAttribute('aria-label', lang === 'en' ? 'Switch to Chinese' : lang === 'zh' ? 'Switch to Filipino' : 'Switch to English');
   }
 
   // 8. Store preference
@@ -306,7 +325,7 @@ function setLanguage(lang) {
 // ─── Toggle Language ────────────────────────────
 
 function toggleLanguage() {
-  const next = currentLang === 'en' ? 'zh' : 'en';
+  const next = currentLang === 'en' ? 'zh' : currentLang === 'zh' ? 'fil' : 'en';
   setLanguage(next);
 }
 
@@ -318,7 +337,7 @@ function initLanguage() {
   const fromStorage = (() => {
     try { return localStorage.getItem('teorigin_lang'); } catch (_) { return null; }
   })();
-  const lang = fromUrl || fromStorage || 'en';
+  const lang = fromUrl || fromStorage || (navigator.language.startsWith('zh') ? 'zh' : navigator.language.startsWith('fil') || navigator.language.startsWith('tl') ? 'fil' : 'en');
   setLanguage(lang);
 }
 
